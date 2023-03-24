@@ -880,8 +880,8 @@ footer .col .app img{
             height: 2px;
             position: absolute;
             background: gold;
-            bottom:-10px;
-            left:-10%;
+            top:0px;
+            right:-30%;
             transition: 0.3s ease-in-out;
         }
                     #hero,.about-header,
