@@ -54,12 +54,16 @@ list-style-type: none;
        font-size:16px;
     }
     #nav-list li a:hover,
+    #cartpage:hover,
     #nav-list li a.active{
         color:goldenrod;
-        
     }
+    
     #nav-list li a:hover::after,
-    #nav-list li a.active::after{
+    #nav-list li a.active::after,
+    #cartpage:hover::after,
+    #cartpage.active::after
+    {
         content:"";
         width:60%;
         height: 2px;
@@ -116,6 +120,7 @@ list-style-type: none;
             font-weight:700;
             box-shadow:-5px -5px 6px 1px rgba(0,0,0,0.3),
             5px 5px 10px 1px rgba(0,0,0,0.7);
+            background: white;
         border-radius: 5px;}
 
         #banner button:hover,
@@ -605,7 +610,7 @@ footer .col .app img{
     .contact-form form{
                   width:100%;   
                  }
-     form input, textarea{
+    .contact-form input, textarea{
                      padding:10px;
                      width: 80%;
                      margin:10px 0;
@@ -787,6 +792,7 @@ footer .col .app img{
         #mobile{
             display:flex;
         }
+       
         #mobile i{
             margin-right:10px;
         }
@@ -799,14 +805,9 @@ footer .col .app img{
         }
  
         #banner button,#hero button{
-            color:white;
-            background-color: rgb(255, 55, 0);;
+            background-color:white;
            }
-           #banner button:hover,
-           #hero button:hover{
-               background-color:white;
-               color:rgb(255, 55, 0);;
-           }
+          
        
         .product-container{
             justify-content:center;
@@ -818,11 +819,11 @@ footer .col .app img{
                 height:200px;
             }
 
-            #hero, #hero.about-header,
-            #hero.shop-header,
-            #hero.blog-header,
+            #hero, .about-header,
+           .shop-header,
+          .blog-header,
             .contact-header iframe,
-            #hero.cart-header{
+         .cart-header{
                   padding:10px 0;
                 height:25vh;
             }
@@ -842,22 +843,11 @@ footer .col .app img{
             width: 20%;}
             
   
-        .form-box{
+        /* .form-box{
             margin-top: 20px;
             width:60%;
-        }
-        .form-box input{
-            width:80%;
-            padding:0 10px;
-            border-top-left-radius:0px;
-            border-bottom-left-radius:0px;
-       
-        }
-        .form-box button{
-             border-top-right-radius:0px;
-             border-bottom-right-radius:0px;
-       
-        }
+        } */
+      
         /* Blog Page */
         #blog-page {
             padding: 80px 20px 0 20px;
@@ -885,12 +875,12 @@ footer .col .app img{
 
 
     @media screen and (max-width:470px){
-                    #hero, #hero.about-header,
-            #hero.shop-header,
-            #hero.blog-header,
+                    #hero,.about-header,
+            .shop-header,
+            .blog-header,
             .contact-header iframe,
             .contact-header,
-            #hero.cart-header{
+            .cart-header{
                   padding:5px 0;
                 height:20vh;
             }
